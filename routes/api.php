@@ -20,3 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('register', 'App\Http\Controllers\Api\Auth\AuthController@register');
 Route::post('login', 'App\Http\Controllers\Api\Auth\AuthController@login');
+Route::post('read', 'App\Http\Controllers\Api\TugasApi\BidanController@read');
+Route::post('update', 'App\Http\Controllers\Api\TugasApi\BidanController@update');
+Route::post('create', 'App\Http\Controllers\Api\TugasApi\BidanController@create');
+Route::post('delete', 'App\Http\Controllers\Api\TugasApi\BidanController@delete');
