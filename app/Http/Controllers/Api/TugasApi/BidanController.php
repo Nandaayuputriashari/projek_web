@@ -45,8 +45,9 @@ class BidanController extends Controller
     }
 
     public function read(){
-        $data=Bidan::all();
-        return response()->json($data,200);
+        $bidan=Bidan::all();
+        // $posyandu=Posyandu::all();
+        return response()->json($bidan,200);
     }
 
     public function delete(Request $request){
