@@ -7,7 +7,7 @@
 				 <a href="index.html">
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">					 	
-						  <img src="{{asset('backend/images/logo-dark.png')}}" alt="">
+						  <img src="{{asset('backend/images/logo puskesmas.png')}}" alt="">
 						  <h3><b>Puskesmas</b> Kabat</h3>
 					 </div>
 				</a>
