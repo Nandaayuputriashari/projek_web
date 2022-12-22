@@ -275,7 +275,7 @@
   border-color: #d5dfea !important; }
 
 .wrapper .border-fade {
-  border-color: rgba(97, 106, 120, 0.07) !important; }
+  border-color: rgba(97, 120, 119, 0.07) !important; }
 
 /*---Text---*/
 .text-secondary {
@@ -401,7 +401,7 @@ Theme Primary Color
   background-image: linear-gradient(45deg, #05389b, #4b05a1); }
 
 .bg-dark-body, .dark-skin.theme-primary.fixed .main-header, .dark-skin.theme-primary .main-header, .dark-skin.theme-secondary.fixed .main-header, .dark-skin.theme-secondary .main-header, .dark-skin.theme-info.fixed .main-header, .dark-skin.theme-info .main-header, .dark-skin.theme-success.fixed .main-header, .dark-skin.theme-success .main-header, .dark-skin.theme-danger.fixed .main-header, .dark-skin.theme-danger .main-header, .dark-skin.theme-warning.fixed .main-header, .dark-skin.theme-warning .main-header {
-  background: #1a233a; }
+  background: #439A97; }
 
 @media (max-width: 767px) {
   .theme-primary.fixed .main-header {
