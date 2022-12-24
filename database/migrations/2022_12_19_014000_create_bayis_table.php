@@ -14,13 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bayis', function (Blueprint $table) {
-            //$table->id('id_bayi')->primary()->max(18);
-            $table->id();
+            $table->string('id_bayi')->primary()->max(18);
             $table->foreignId('id_posyandu')->references('id')->on('posyandus');
             $table->string('name_bayi');
             $table->string('nik_ibu')->max(18);
             $table->string('name_ibu');
-            $table->string('tgl_lahir');
+            $table->date('tgl_lahir');
             $table->string('jenis_kel');
             $table->string('rt');
             $table->string('rw');

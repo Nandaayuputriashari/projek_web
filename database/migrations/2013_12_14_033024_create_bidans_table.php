@@ -14,13 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bidans', function (Blueprint $table) {
-            // $table->String('id')->primary();
-            $table->id();
+            $table->id("id_bidan");
             $table->String('nama');
             $table->String('nip');
-            $table->foreignId('id_posyandu')->references('id')->on('posyandus');
-            // $table->dateTime('Create_At');
-            // $table->dateTime('Update_At');
+            $table->foreignId('id_posyandu')->references('id_posyandu')->on('posyandus');
             $table->timestamps();
         });
     }
