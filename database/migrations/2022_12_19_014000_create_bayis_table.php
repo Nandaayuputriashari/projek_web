@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bayis', function (Blueprint $table) {
-            $table->string('id_bayi')->primary()->max(18);
+            //$table->id('id_bayi')->primary()->max(18);
+            $table->id();
             $table->foreignId('id_posyandu')->references('id')->on('posyandus');
             $table->string('name_bayi');
             $table->string('nik_ibu')->max(18);
