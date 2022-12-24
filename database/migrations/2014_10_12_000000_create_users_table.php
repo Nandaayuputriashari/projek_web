@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            // $table->foreignId('id_penggguna')->references('id')->on('bidans');
             $table->string('name');
             $table->string('usertype')->nullable();
             $table->string('email')->unique();

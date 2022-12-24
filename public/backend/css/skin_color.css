@@ -18,13 +18,13 @@ File: scss
 .light-skin .main-header .navbar .nav > li > a {
   color: #d5dfea; }
   .light-skin .main-header .navbar .nav > li > a:hover, .light-skin .main-header .navbar .nav > li > a:active, .light-skin .main-header .navbar .nav > li > a:focus {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: rgba(0, 104, 90, 0.05); }
 .light-skin .main-header .navbar .nav .open > a {
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: rgba(0, 104, 90, 0.05); }
   .light-skin .main-header .navbar .nav .open > a:hover, .light-skin .main-header .navbar .nav .open > a:focus {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: rgba(0, 104, 90, 0.05); }
 .light-skin .main-header .navbar .nav > .active > a {
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: rgba(0, 104, 90, 0.05); }
 .light-skin .main-sidebar {
   -webkit-box-shadow: 0 0 21px 0 rgba(89, 102, 122, 0.1);
   box-shadow: 0 0 21px 0 rgba(89, 102, 122, 0.1);
@@ -52,8 +52,8 @@ File: scss
   border: 1px solid gray; }
   .light-skin .sidebar-form input[type="text"] {
     box-shadow: none;
-    background-color: rgba(0, 0, 0, 0.59);
-    border: 1px solid rgba(0, 0, 0, 0.59);
+    background-color: rgba(0, 104, 90, 0.05);
+    border: 1px solid rgba(0, 104, 90, 0.05);
     height: 35px;
     color: #ffffff;
     border-top-left-radius: 2px;
