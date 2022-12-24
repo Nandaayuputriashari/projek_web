@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('penimbangans', function (Blueprint $table) {
-            $table->string('id_penimbangan')->primary();
-            $table->foreignId('bayi_id')->constrained();
-            $table->foreignId('posyandu_id')->constrained();
+            $table->id('id_penimbangan');
+            $table->string('bayi_id');
+            $table->foreign('bayi_id')->references("id_bayi")->on("bayis");
+            $table->foreignId('posyandu_id')->references("id_posyandu")->on("posyandus");
             $table->double('tinggi_badan');
             $table->double('berat_badan');
             $table->string('posisi');

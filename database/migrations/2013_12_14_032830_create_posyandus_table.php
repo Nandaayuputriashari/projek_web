@@ -14,11 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posyandus', function (Blueprint $table) {
-            $table->id();
+            $table->id("id_posyandu");
             $table->String('nama');
             $table->String('alamat');
-            // $table->dateTime('Create_At');
-            // $table->dateTime('Update_At');
+            $table->date("jadwal");
             $table->timestamps();
         });
     }
