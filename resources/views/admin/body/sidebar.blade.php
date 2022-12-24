@@ -27,14 +27,13 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>Penimbangan</span>
+
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{('penimbangan.view')}}"><i class="ti-more"></i>Penimbangan</a></li>
-            <li><a href="{{('penimbangan.add')}}"><i class="ti-more"></i>Penimbangan</a></li>
+
           </ul>
         </li> 
 		  
