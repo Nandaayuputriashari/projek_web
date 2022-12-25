@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,17 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin.index');
     })->name('dashboard');
+});
+
+Route::get('/admin/logout',[AdminController::class, 'logout'])->name('admin.logout');
+
+Route::prefix('penimbangan')->group(function(){
+    Route::get('/view',[PenimbanganController::class, 'PenimbanganView'])->name('penimbangan.view');
+    Route::get('/add',[PenimbanganController::class, 'PenimbanganAdd'])->name('penimbangan.add');
+    Route::post('/store',[PenimbanganController::class, 'PenimbangannStore'])->name('penimbangan.store');
+    Route::get('/edit/{id}',[PenimbanganController::class, 'PenimbanganEdit'])->name('penimbangan.edit');
+    Route::post('/update/{id}',[PenimbanganController::class, 'PenimbanganUpdate'])->name('penimbangan.update');
+    Route::get('/delete/{id}',[PenimbanganController::class, 'PenimbanganDelete'])->name('penimbangan.delete');
 });
