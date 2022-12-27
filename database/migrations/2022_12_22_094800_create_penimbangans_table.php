@@ -14,14 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('penimbangans', function (Blueprint $table) {
-            $table->id('id_penimbangan')->primary();
+            $table->id('id_penimbangan');
+            $table->string('bayi_id');
+            $table->foreign('bayi_id')->references("id_bayi")->on("bayis");
+            $table->foreignId('posyandu_id')->references("id_posyandu")->on("posyandus");
             $table->double('tinggi_badan');
             $table->double('berat_badan');
             $table->string('posisi');
             $table->string('umur');
             $table->date('tanggal_pemeriksaan');
-            $table->foreignId('id_by')->references('id_bayi')->on('bayis');
-            $table->foreignId('id_pos')->references('id_posyandu')->on('posyandus');
             $table->timestamps();
         });
     }
