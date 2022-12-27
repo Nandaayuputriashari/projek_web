@@ -16,7 +16,7 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Data User</h3>
-                  <a href="" style="float:right;" type="button" class="btn btn-rounded btn-success mb-5">Tambah User</a>
+                  <a href="{{route('user.add')}}" style="float:right;" type="button" class="btn btn-rounded btn-success mb-5">Tambah User</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -38,8 +38,8 @@
 								<td>{{$user->name}}</td>
 								<td>{{$user->usertype}}</td>
 								<td>
-									<a href="" class="btn btn-info">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+									<a href="{{route('users.edit', $user->id)}}" class="btn btn-info">Edit</a>
+                                    <a href="{{route('users.delete', $user->id)}}" id="delete" class="btn btn-danger">Delete</a>
 								</td>
 
 							</tr>
@@ -78,3 +78,7 @@
 
 
 @endsection
+
+  <!-- Vendor JS -->
+  <script src="{{asset('../assets/vendor_components/datatable/datatables.min.js')}}"></script>
+	<script src="{{asset('backend/js/pages/data-table.js')}}"></script>

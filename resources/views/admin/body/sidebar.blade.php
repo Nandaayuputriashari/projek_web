@@ -27,13 +27,14 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-
+            <span>User</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-
+          <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Tampilkan User</a></li>
+            <li><a href="{{route('user.add')}}"><i class="ti-more"></i>Tambah User</a></li>
           </ul>
         </li> 
 		  

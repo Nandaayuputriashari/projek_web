@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\PenimbanganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,23 @@ Route::middleware([
 
 Route::get('/admin/logout',[AdminController::class, 'logout'])->name('admin.logout');
 
+//semua route untuk user
+
+Route::prefix('users')->group(function () {
+    Route::get('/view',[UserController::class, 'UserView'])->name('user.view');
+    Route::get('/add',[UserController::class, 'UserAdd'])->name('user.add');
+    Route::post('/store',[UserController::class, 'UserStore'])->name('users.store');
+    Route::post('/store',[UserController::class, 'UserStore'])->name('users.store');
+    Route::get('/edit/{id}',[UserController::class, 'UserEdit'])->name('users.edit');
+    Route::post('/update/{id}',[UserController::class, 'UserUpdate'])->name('users.update');
+    Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
+});
+
+Route::prefix('penimbangan')->group(function(){
+    Route::get('/view',[PenimbanganController::class, 'PenimbanganView'])->name('penimbangan.view');
+    Route::get('/add',[PenimbanganController::class, 'PenimbanganAdd'])->name('penimbangan.add');
+    Route::post('/store',[PenimbanganController::class, 'PenimbangannStore'])->name('penimbangan.store');
+    Route::get('/edit/{id}',[PenimbanganController::class, 'PenimbanganEdit'])->name('penimbangan.edit');
+    Route::post('/update/{id}',[PenimbanganController::class, 'PenimbanganUpdate'])->name('penimbangan.update');
+    Route::get('/delete/{id}',[PenimbanganController::class, 'PenimbanganDelete'])->name('penimbangan.delete');
 });
