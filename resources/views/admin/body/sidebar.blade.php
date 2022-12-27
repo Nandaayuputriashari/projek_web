@@ -33,8 +33,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{('penimbangan.view')}}"><i class="ti-more"></i>Penimbangan</a></li>
-            <li><a href="{{('penimbangan.add')}}"><i class="ti-more"></i>Penimbangan</a></li>
+            <li><a href="{{route('penimbangan.view')}}"><i class="ti-more"></i>Penimbangan</a></li>
+            <li><a href="{{route('penimbangan.add')}}"><i class="ti-more"></i>Penimbangan</a></li>
           </ul>
         </li> 
 		  
