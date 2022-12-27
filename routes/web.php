@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\BayiController;
 use App\Http\Controllers\Backend\UserController;
 
 /*
@@ -31,4 +32,13 @@ Route::middleware([
 
 Route::get('/admin/logout',[AdminController::class, 'logout'])->name('admin.logout');
 
+//semua route untuk bayi
+//Route::get('/bayi/view',[BayiController::class, 'BayiView'])->name('bayi.view');
+Route::prefix('bayi')->group(function () {
+    Route::get('/view',[BayiController::class, 'BayiView'])->name('bayi.view');
+    Route::get('/add',[BayiController::class, 'BayiAdd'])->name('bayi.add');
+    Route::post('/store',[BayiController::class, 'BayiStore'])->name('bayi.store');
+    Route::get('/edit/{id}',[BayiController::class, 'BayiEdit'])->name('bayi.edit');
+    Route::post('/update/{id}',[BayiController::class, 'BayiUpdate'])->name('bayi.update');
+    Route::get('/delete/{id}',[BayiController::class, 'BayiDelete'])->name('bayi.delete');
 });
