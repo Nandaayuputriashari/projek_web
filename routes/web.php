@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\backend\PenimbanganController;
+
+use App\Http\Controllers\Backend\BayiController;
+use App\Http\Controllers\Backend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,11 +33,13 @@ Route::middleware([
 
 Route::get('/admin/logout',[AdminController::class, 'logout'])->name('admin.logout');
 
-Route::prefix('penimbangan')->group(function(){
-    Route::get('/view',[PenimbanganController::class, 'PenimbanganView'])->name('penimbangan.view');
-    Route::get('/add',[PenimbanganController::class, 'PenimbanganAdd'])->name('penimbangan.add');
-    Route::post('/store',[PenimbanganController::class, 'PenimbanganStore'])->name('penimbangan.store');
-    Route::get('/edit/{id}',[PenimbanganController::class, 'PenimbanganEdit'])->name('penimbangan.edit');
-    Route::post('/update/{id}',[PenimbanganController::class, 'PenimbanganUpdate'])->name('penimbangan.update');
-    Route::get('/delete/{id}',[PenimbanganController::class, 'PenimbanganDelete'])->name('penimbangan.delete');
+//semua route untuk bayi
+//Route::get('/bayi/view',[BayiController::class, 'BayiView'])->name('bayi.view');
+Route::prefix('bayi')->group(function () {
+    Route::get('/view',[BayiController::class, 'BayiView'])->name('bayi.view');
+    Route::get('/add',[BayiController::class, 'BayiAdd'])->name('bayi.add');
+    Route::post('/store',[BayiController::class, 'BayiStore'])->name('bayi.store');
+    Route::get('/edit/{id}',[BayiController::class, 'BayiEdit'])->name('bayi.edit');
+    Route::post('/update/{id}',[BayiController::class, 'BayiUpdate'])->name('bayi.update');
+    Route::get('/delete/{id}',[BayiController::class, 'BayiDelete'])->name('bayi.delete');
 });
