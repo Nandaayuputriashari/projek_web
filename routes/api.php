@@ -44,3 +44,4 @@ Route::post('viewLimitAllBayi', 'App\Http\Controllers\Api\Android\BayiController
 //penimbangan
 Route::post('addPenimbangan', 'App\Http\Controllers\Api\Android\PenimbanganController@add');
 Route::post('viewAllPenimbangan', 'App\Http\Controllers\Api\Android\PenimbanganController@viewAll');
+

@@ -13,7 +13,7 @@ class BayiController extends Controller
             'id' => 'required'
         ]);
 
-        $data = Bayi::where('id_posyandu',$request->id)->first();
+        $data = Bayi::where('id_bayi',$request->id)->first();
 
         if($data == null){
             return response()->json([
@@ -22,13 +22,13 @@ class BayiController extends Controller
         }
 
         return response()->json([
-            "id" => $data->id_bayi,
+            "id_bayi" => $data->id_bayi,
             "id_posyandu" => $data->id_posyandu,
-            "nama" => $data->name_bayi,
+            "name_bayi" => $data->name_bayi,
             "nik_ibu" => $data->nik_ibu,
-            "nama_ibu" => $data->name_ibu,
+            "name_ibu" => $data->name_ibu,
             "tgl_lahir" => $data->tgl_lahir,
-            "jenis_kelamin" => $data->jenis_kelamin,
+            "jenis_kel" => $data->jenis_kel,
             "rt" => $data->rt,
             "rw" => $data->rw
         ],200);
